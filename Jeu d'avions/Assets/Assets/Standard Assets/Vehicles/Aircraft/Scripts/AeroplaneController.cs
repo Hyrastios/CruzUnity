@@ -91,6 +91,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         }
 
 
+
         private void ClampInputs()
         {
             // clamp the inputs to -1 to 1 range
@@ -106,7 +107,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
             // Calculate roll & pitch angles
             // Calculate the flat forward direction (with no y component).
             var flatForward = transform.forward;
-            flatForward.y = 0;
+            //flatForward.y = 0;
             // If the flat forward vector is non-zero (which would only happen if the plane was pointing exactly straight upwards)
             if (flatForward.sqrMagnitude > 0)
             {
