@@ -7,7 +7,7 @@ public class Jeu : MonoBehaviour
     private int NbPorteTotale { get; set; }
     private int NbPorteFranchie;
 
-    Porte[] TabPorte = new Porte[8];
+    Checkpoint[] TabCheckpoints = new Checkpoint[8];
 
     // Start is called before the first frame update
     void Start()
@@ -18,10 +18,21 @@ public class Jeu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+        int tempNbPorteFranchie = 0;
+        foreach (Checkpoint c in TabCheckpoints)
+        {
+            if (c.EstFranchie == true)
+            {
+                tempNbPorteFranchie++;
+            }
+        }
+        NbPorteFranchie = tempNbPorteFranchie;
+        Debug.Log(" Le nombre de porte franchie est : " + tempNbPorteFranchie);
 
     }
 
-     public void SetNbPorteTotale( int newNbPorteTotale) { this.NbPorteTotale = newNbPorteTotale; }
+public void SetNbPorteTotale( int newNbPorteTotale) { this.NbPorteTotale = newNbPorteTotale; }
      public void SetNbPorteFranchie() { this.NbPorteFranchie ++ ; }
 }
 
