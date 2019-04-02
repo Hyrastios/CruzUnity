@@ -7,7 +7,7 @@ public class Jeu : MonoBehaviour
     private int NbPorteTotale { get; set; }
     private int NbPorteFranchie;
 
-    Checkpoint[] TabCheckpoints = new Checkpoint[8];
+    Checkpoint[] TabCheckpoints = new Checkpoint[7];
 
     // Start is called before the first frame update
     void Start()
