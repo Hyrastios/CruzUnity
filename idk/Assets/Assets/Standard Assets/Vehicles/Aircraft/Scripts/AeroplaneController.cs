@@ -91,7 +91,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         }
 
 
-
         private void ClampInputs()
         {
             // clamp the inputs to -1 to 1 range
