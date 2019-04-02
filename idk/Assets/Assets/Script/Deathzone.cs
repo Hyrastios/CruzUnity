@@ -11,7 +11,7 @@ public class Deathzone : MonoBehaviour
     {
         if (other.transform.gameObject.tag == "Player")
         {
-            other.transform.position = respawnPositions;
+
         }
     }
 }

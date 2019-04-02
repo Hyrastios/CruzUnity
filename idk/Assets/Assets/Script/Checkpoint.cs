@@ -20,7 +20,6 @@ public class Checkpoint : MonoBehaviour
             int cptConsole = 0; 
             if (cptConsole == 0)
             {
-                Debug.Log("La porte est franchie, voilà");
                 cptConsole++; 
             }
             Destroy(gameObject); // Pour détruire le Checkpoint après l'avoir franchi
