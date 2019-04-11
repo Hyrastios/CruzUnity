@@ -12,6 +12,15 @@ public class Deathzone : MonoBehaviour
     {
         if (other.transform.gameObject.tag == "Player")
         {
+            if (other != null)
+            {
+                Debug.Log("Other n'est pas nul");
+            }
+            if (other.GetComponent<AeroplaneController>() != null)
+            {
+                other.GetComponent<AeroplaneController>().Immobilize();
+                Debug.Log("other.GetComponent<AeroplaneController>() n'est pas nul");
+            }
             if (other.gameObject.GetComponent<AeroplaneController>() != null)
             {
                 other.gameObject.GetComponent<AeroplaneController>().Immobilize();
@@ -19,8 +28,16 @@ public class Deathzone : MonoBehaviour
             }
             else
             {
-                Debug.Log("Le pointeur est null");
+                Debug.Log("Le pointeur est null, t'as pas perdu le contrôle");
             }
+            Debug.Log("On va détruire");
+            Destroy(other);
+            if (other != null)
+            {
+                Debug.Log("Le pointeur vers other n'est pas nul");
+            }
+            else Debug.Log("Le pointeur est nul, logiquement t'as plus de contrôle");
+                   
         }
     }
 
