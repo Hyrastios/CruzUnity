@@ -52,7 +52,7 @@ public class WaveSpawner : MonoBehaviour {
 
     void SpawnSphere()
     {
-        Vector3 pos = new Vector3(Random.Range(25,480) , 200, 69);
+        Vector3 pos = new Vector3(Random.Range(50,460) , 200, 69);
         print("la pos de spawn: " + spawnPoint.position);
         Instantiate(spawn,pos,spawnPoint.rotation);
     }
