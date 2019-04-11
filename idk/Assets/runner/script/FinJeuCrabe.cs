@@ -10,6 +10,8 @@ public class FinJeuCrabe : MonoBehaviour
     public static bool endGame;
     public GameObject FinJeu;
     public Text EndGameCrabe;
+    public Text BestScore;
+
 
     void Start()
     {
@@ -24,10 +26,7 @@ public class FinJeuCrabe : MonoBehaviour
             spawn.activ = false;
             FinJeu.SetActive(true);
             EndGameCrabe.text = System.Math.Truncate(TimerCrabe.targetTime).ToString();
-            /*  finPartie = true;
-              pdv.SetActive(false);
-              End.SetActive(true);
-              FinJeu.SetActive(true); */
+            BestScore.text = "Best Score : " + TimerCrabe.inText;
         }
 
     }
