@@ -5,11 +5,28 @@ using UnityStandardAssets.Vehicles.Aeroplane;
 
 public class Deathzone : MonoBehaviour
 {
+    Deathzone deathzone;
+    AeroplaneController AC;
 
-    public Vector3 respawnPositions;
+    private void Start()
+    {
+        AC = FindObjectOfType<AeroplaneController>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
+        if (AC == null)
+        {
+            Debug.Log("AC est null"); 
+        }
+        if (other.transform.gameObject.tag == "Player")
+        {
+            Debug.Log("On est avec un joueur");
+            AC.Immobilize();
+
+        }
+
+        /*
         if (other.transform.gameObject.tag == "Player")
         {
             if (other != null)
@@ -37,8 +54,12 @@ public class Deathzone : MonoBehaviour
                 Debug.Log("Le pointeur vers other n'est pas nul");
             }
             else Debug.Log("Le pointeur est nul, logiquement t'as plus de contrôle");
-                   
-        }
+            other.GetComponentInChildren<AeroplaneController>().Immobilize();
+            other.GetComponentInParent<AeroplaneController>().Immobilize();
+         }
+         */
+
+        
     }
 
 }
