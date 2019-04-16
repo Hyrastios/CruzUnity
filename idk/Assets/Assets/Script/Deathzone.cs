@@ -16,12 +16,11 @@ public class Deathzone : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (AC == null)
-        {
-            Debug.Log("AC est null"); 
-        }
+            Debug.Log("AC est null");
         if (other.transform.gameObject.tag == "Player")
         {
             Debug.Log("On est avec un joueur");
+            Debug.Log(AC);
             AC.Immobilize();
 
         }
