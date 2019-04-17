@@ -12,13 +12,6 @@ public class Deathzone : MonoBehaviour
     private void Start()
     {
         AC = FindObjectOfType<AeroplaneController>();
-       /*AA = FindObjectOfType<AeroplaneAudio>();
-        if (AA == null)
-        {
-            Debug.Log("C'est nul");
-        }
-        */
-
     }
 
     void OnTriggerEnter(Collider other)
@@ -30,7 +23,6 @@ public class Deathzone : MonoBehaviour
             bool b = false;
             b = AC.Immobilize();
 
-            //AA.Lecture = false;
             Jeu.endGame = true;
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using static System.Math;
+using UnityStandardAssets.Vehicles.Aeroplane;
 
 public class Jeu : MonoBehaviour
 {
@@ -18,7 +19,13 @@ public class Jeu : MonoBehaviour
     public Text TexteDeFin4;
 
     public Text texttime;
-    
+
+    AeroplaneAudio AA;
+    AeroplaneController AC;
+
+    GameObject Avion;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +33,9 @@ public class Jeu : MonoBehaviour
         NbPorteFranchie = 0;
         endGame = false;
         victoire = false;
+
+        AA = FindObjectOfType<AeroplaneAudio>();
+        AC = FindObjectOfType<AeroplaneController>();
     }
 
     // Update is called once per frame
@@ -37,9 +47,18 @@ public class Jeu : MonoBehaviour
         }
         else 
         {
+            AudioSource[] A = GameObject.FindGameObjectWithTag("Player").GetComponents<AudioSource>();
+
+            for (int i = 0; i<A.Length; i++)
+            {
+                A[i].Stop();
+            }
+
+
+            AC.Immobilize();
             Time.timeScale = 0;
             FinJeu.SetActive(true);
-
+            AudioListener.pause = false; 
             if (victoire)
             {
                 TexteDeFin.text = "Votre temps pour franchir";

@@ -10,9 +10,9 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
         public class AdvancedSetttings // A class for storing the advanced options.
         {
             public float engineMinDistance = 50f;                   // The min distance of the engine audio source.
-            public float engineMaxDistance = 1000f;                 // The max distance of the engine audio source.
+            public float engineMaxDistance = 100f;                 // The max distance of the engine audio source.
             public float engineDopplerLevel = 1f;                   // The doppler level of the engine audio source.
-            [Range(0f, 1f)] public float engineMasterVolume = 0.5f; // An overall control of the engine sound volume.
+            [Range(0f, 1f)] public float engineMasterVolume = 0.01f; // An overall control of the engine sound volume.
             public float windMinDistance = 10f;                     // The min distance of the wind audio source.
             public float windMaxDistance = 100f;                    // The max distance of the wind audio source.
             public float windDopplerLevel = 1f;                     // The doppler level of the wind audio source.
@@ -77,8 +77,6 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
 
         private void Update()
         {
-            if (Lecture)
-            {
                 // Find what proportion of the engine's power is being used.
                 var enginePowerProportion = Mathf.InverseLerp(0, m_Plane.MaxEnginePower, m_Plane.EnginePower);
 
@@ -97,7 +95,7 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
                 float planeSpeed = m_Rigidbody.velocity.magnitude;
                 m_WindSoundSource.pitch = m_WindBasePitch + planeSpeed * m_WindSpeedPitchFactor;
                 m_WindSoundSource.volume = Mathf.InverseLerp(0, m_WindMaxSpeedVolume, planeSpeed) * m_AdvancedSetttings.windMasterVolume;
-            }
         }
+
     }
 }
