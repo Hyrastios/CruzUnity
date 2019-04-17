@@ -254,9 +254,10 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
 
 
         // Immobilize can be called from other objects, for example if this plane is hit by a weapon and should become uncontrollable
-        public void Immobilize()
+        public bool Immobilize()
         {
             m_Immobilized = true;
+            return true;
         }
 
 

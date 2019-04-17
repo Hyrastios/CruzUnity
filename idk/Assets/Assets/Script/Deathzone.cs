@@ -7,10 +7,12 @@ public class Deathzone : MonoBehaviour
 {
     Deathzone deathzone;
     AeroplaneController AC;
+    GameObject avion;
 
     private void Start()
     {
         AC = FindObjectOfType<AeroplaneController>();
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,7 +23,14 @@ public class Deathzone : MonoBehaviour
         {
             Debug.Log("On est avec un joueur");
             Debug.Log(AC);
-            AC.Immobilize();
+
+            bool b = false;
+            b = AC.Immobilize();
+            if (b)
+            {
+                Debug.Log("on a bien appellé");
+            }
+            else Debug.Log("Il y a eu un soucis"); 
 
         }
 
