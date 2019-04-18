@@ -16,6 +16,7 @@ public class PositionFace : MonoBehaviour
     {
         //_camDistance = Vector3.Distance(Camera.main.transform.position, transform.position);
         turnSpeed = 25f;
+        speed = 100f;
         pos = new Vector3(260, 100, 175);
         rot = new Quaternion(20, -30, -10, 0);
     }
