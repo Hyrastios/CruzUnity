@@ -13,7 +13,6 @@ using UnityEngine;
 
 public class Buoyancy : MonoBehaviour
 {
-//	public Ocean ocean;
 
 	public float density = 500;
 	public int slicesPerAxis = 2;
@@ -46,7 +45,6 @@ public class Buoyancy : MonoBehaviour
 		if (GetComponent<Collider>() == null)
 		{
 			gameObject.AddComponent<MeshCollider>();
-			//Debug.LogWarning(string.Format("[Buoyancy.cs] Object \"{0}\" had no collider. MeshCollider has been added.", name));
 		}
 		isMeshCollider = GetComponent<MeshCollider>() != null;
 
@@ -69,7 +67,6 @@ public class Buoyancy : MonoBehaviour
 		if (GetComponent<Rigidbody>() == null)
 		{
 			gameObject.AddComponent<Rigidbody>();
-		//Debug.LogWarning(string.Format("[Buoyancy.cs] Object \"{0}\" had no Rigidbody. Rigidbody has been added.", name));
 		}
 		GetComponent<Rigidbody>().centerOfMass = new Vector3(0, -bounds.extents.y * 0f, 0) + transform.InverseTransformPoint(bounds.center);
 
@@ -86,7 +83,6 @@ public class Buoyancy : MonoBehaviour
 		float archimedesForceMagnitude = WATER_DENSITY * Mathf.Abs(Physics.gravity.y) * volume;
 		localArchimedesForce = new Vector3(0, archimedesForceMagnitude, 0) / voxels.Count;
 
-		//Debug.Log(string.Format("[Buoyancy.cs] Name=\"{0}\" volume={1:0.0}, mass={2:0.0}, density={3:0.0}", name, volume, GetComponent<Rigidbody>().mass, density));
 	}
 
 	/// <summary>
