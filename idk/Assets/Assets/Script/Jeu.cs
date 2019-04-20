@@ -10,9 +10,12 @@ public class Jeu : MonoBehaviour
     private int NbPorteTotale { get; set; }
     public static int NbPorteFranchie { get; set; }
 
-    public static bool endGame;
-    public static bool victoire;
+    public static bool endGame; 
+    public static bool victoire; // Booleen qui permet de savoir si on a gagné ou perdu 
+
+    // GameObject servant à l'affichage du texte de fin
     public GameObject FinJeu;
+
     public Text TexteDeFin;
     public Text TexteDeFin2;
     public Text TexteDeFin3;
@@ -20,7 +23,6 @@ public class Jeu : MonoBehaviour
 
     public Text texttime;
 
-    AeroplaneAudio AA;
     AeroplaneController AC;
 
     GameObject Avion;
@@ -34,30 +36,38 @@ public class Jeu : MonoBehaviour
         endGame = false;
         victoire = false;
 
-        AA = FindObjectOfType<AeroplaneAudio>();
+        // On récupère le script du controller de l'avion
         AC = FindObjectOfType<AeroplaneController>();
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (NbPorteFranchie == NbPorteTotale)
+        {
+            victoire = true;
+            endGame = true;
+        }
+
         if (!endGame)
         {
             texttime.text = NbPorteFranchie.ToString() + " / " + NbPorteTotale;
         }
         else 
         {
-            AudioSource[] A = GameObject.FindGameObjectWithTag("Player").GetComponents<AudioSource>();
+            // Creation d'un tableau contenant toutes les sources audio afin de les arrêter
+            AudioSource[] TabAS = GameObject.FindGameObjectWithTag("Player").GetComponents<AudioSource>();
 
-            for (int i = 0; i<A.Length; i++)
+            for (int i = 0; i<TabAS.Length; i++)
             {
-                A[i].Stop();
+                TabAS[i].Stop();
             }
 
-
+            // On immobilise l'avion 
             AC.Immobilize();
             Time.timeScale = 0;
-            FinJeu.SetActive(true);
+
             AudioListener.pause = false; 
             if (victoire)
             {
@@ -71,19 +81,12 @@ public class Jeu : MonoBehaviour
                 TexteDeFin3.text = "Vous avez";
                 TexteDeFin4.text = "perdu.";
             }
+            // On affiche le texte de fin de partie
+            FinJeu.SetActive(true);
         }
-        if (NbPorteFranchie == NbPorteTotale)
-        {
-            victoire = true;
-            endGame = true;
-        }
-
     }
 
     public void SetNbPorteTotale( int newNbPorteTotale) { this.NbPorteTotale = newNbPorteTotale; }
-    // public void SetNbPorteFranchie() => this.NbPorteFranchie++;
-
-
 }
 
 
