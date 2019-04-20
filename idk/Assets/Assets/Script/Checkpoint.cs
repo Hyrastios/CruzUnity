@@ -7,7 +7,6 @@ using UnityEngine;
 public class Checkpoint : MonoBehaviour
 {
     public AudioClip bip; 
-
     Deathzone deathzone;
     public bool EstFranchie { get; set; }
 
