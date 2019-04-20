@@ -7,7 +7,6 @@ public class Deathzone : MonoBehaviour
 {
     Deathzone deathzone;
     AeroplaneController AC;
-    GameObject avion;
 
     private void Start()
     {
@@ -16,13 +15,9 @@ public class Deathzone : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (AC == null)
-            Debug.Log("AC est null");
         if (other.transform.gameObject.tag == "Player")
         {
-            bool b = false;
-            b = AC.Immobilize();
-
+            AC.Immobilize();
             Jeu.endGame = true;
         }
     }
