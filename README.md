@@ -18,9 +18,9 @@ mouvement via OpenCV aucun pré-requis est nécessaire (hormis avoir une webcam 
 Voici les différents ReadMe pour plus d'informations :
 
 ### Les mini-Jeu
- * jeu du ballon: voir [jeuBallon.md](idk/Assets/JeuBallon/jeuBallon.md)
- * jeu d'avion: voir [jeuAvion.md](idk/Assets/JeuAvion/jeuAvion.md)
- * jeu Runner: voir [runner.md](idk/Assets/runner/runner.md)
+ * Jeu du ballon: voir [jeuBallon.md](idk/Assets/JeuBallon/jeuBallon.md)
+ * Jeu d'avion: voir [jeuAvion.md](idk/Assets/JeuAvion/jeuAvion.md)
+ * Jeu Runner: voir [runner.md](idk/Assets/runner/runner.md)
 
 ### Le Plugin OpenCV
 
