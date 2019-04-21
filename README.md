@@ -1,9 +1,7 @@
 # LifProjet : Création d'un jeu-vidéo en reconnaissance de mouvement sous Unity
 
-Ce projet est composé de 3 mini-jeux développés sous Unity: un premier jeu ou l'on doit cliquer sur
-des ballons qui chutent afin de gagner des points, pour le deuxième on contrôle un avion qui doit passer dans 
-les portes et dans le dernier on doit éviter des vagues d'obstacles en se déplaçant à gauche ou à droite. Ce 
-dernier étant contrôlé par reconnaissance de mouvement capturé par la webcam grâce à OpenCV.
+Ce projet a été réalisé dans le cadre de l'UE [LifProjet](http://perso.univ-lyon1.fr/fabien.rico/site/projet:start). Ce projet est composé de 3 mini-jeux développés sous Unity. Un premier jeu ou l'on doit cliquer sur des ballons qui chutent afin de gagner des points, pour le deuxième on contrôle un avion qui doit passer dans 
+les portes et dans le dernier on doit éviter des vagues d'obstacles en se déplaçant à gauche ou à droite. Ce dernier étant contrôlé par reconnaissance de mouvement capturé par la webcam grâce à OpenCV.
 
 ## Getting Started
 
