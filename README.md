@@ -24,8 +24,8 @@ Voir les différents readMe pour en savoir plus.
 ### Les mini-Jeu
  * jeu du ballon: voir [jeuBallon.md](idk/Assets/JeuBallon/jeuBallon.md)
  * jeu d'avion: voir [jeuAvion.md](idk/Assets/JeuAvion/jeuAvion.md)
- * jeu Runner: voir [jeuRunner.md](idk/Assets/runner/jeuRunner.md)
+ * jeu Runner: voir [runner.md](idk/Assets/runner/runner.md)
 
 ### Le Plugin OpenCV
 
-voir [PluginOpenCV.md](idk/Assets/runner/PluginOpenCV.md)
+voir [pluginOpenCV.md](idk/Assets/runner/pluginOpenCV.md)
