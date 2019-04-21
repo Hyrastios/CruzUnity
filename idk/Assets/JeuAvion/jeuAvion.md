@@ -9,10 +9,12 @@ Dans ce jeu vous contrôlez un avion, votre objectif est de finir le circuit pou
  * retour menu prinicpal
  * effet sonore de l'avion et lorsque l'on passe entre les bouées.
  * décor élaboré.
- * flotaison des bouées élaboré( inspiré du script disponible ici: https://forum.unity.com/threads/buoyancy-script.72974/ )
+ * flotaison des bouées élaboré
  * détection de collision de l'avion avec le décor.
 
 ## Assets utilisés
 2 Assets élaborés ont été utilisé en partie dans ce projet, ceux-ci sont disponibles sur l'Assets Store d'Unity ici:
  * le modèle de l'avion: https://assetstore.unity.com/packages/essentials/asset-packs/standard-assets-32351
  * les modèles pour la ville: https://assetstore.unity.com/packages/3d/environments/roadways/windridge-city-132222
+ 
+la flotaison des bouées est issue du script disponible ici: https://forum.unity.com/threads/buoyancy-script.72974/
