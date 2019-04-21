@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using static System.Math;
 using System.IO;
 
+//Contrôle le timer dans le jeu Crabe + le meilleur score
 
 public class TimerCrabe : MonoBehaviour
 {
@@ -21,10 +22,9 @@ public class TimerCrabe : MonoBehaviour
     void Update()
     {
         targetTime += Time.deltaTime;
-      //  targetTime = System.Math.Truncate(targetTime);
         texttime.text = System.Math.Truncate(targetTime).ToString();
 
-        if (FinJeuCrabe.endGame)
+        if (FinJeuCrabe.endGame) //Si la partie est finie est que le score du joueur est > au meilleur score alors on le remplace dans le fichier ScoreCrabe
         {
             inText = System.IO.File.ReadAllText("Assets/runner/script/ScoreCrabe.txt");
             if (int.Parse(inText) < System.Math.Truncate(targetTime))

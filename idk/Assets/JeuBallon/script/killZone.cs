@@ -11,7 +11,7 @@ public class killZone : MonoBehaviour {
         nbkill = 0;
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollisionEnter(Collision other) //Lorsque le ballon touche le sol on le détruit et le nombre de vie diminue 
     {
         Destroy(other.gameObject);
         nbkill++;

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Détruit le ballon lorsque le joueur clic dessus (+son)
+
 public class clic : MonoBehaviour {
 
     public AudioClip sonball;

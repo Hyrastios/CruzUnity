@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Affiche le meilleur score à la fin de la partie
 
 public class TextEndGame : MonoBehaviour
 {

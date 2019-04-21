@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Recommence une partie (pour les jeux ballon et crabe)
+
 public class RestartGame : MonoBehaviour
 {
     Scene scene;  

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Contrôle l'apparition aléatoire des crabes
+
 public class spawn : MonoBehaviour
 {
     public GameObject[] crab;

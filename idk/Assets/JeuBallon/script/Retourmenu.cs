@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Lance la scène "menu" dans unity
+
 public class Retourmenu : MonoBehaviour
 {
     public GameObject RetMenu;
 
-    // Update is called once per frame
     void Update()
     {
         if (RetMenu.activeInHierarchy)

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Gere le déplacement des crabes
+
 public class Mvcrabe : MonoBehaviour
 {
     private Vector3 posi;

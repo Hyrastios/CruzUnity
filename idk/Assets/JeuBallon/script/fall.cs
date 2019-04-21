@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Contrôle la vitesse de chute des ballons
+
 public class fall : MonoBehaviour {
 
     private Rigidbody rBody;
@@ -15,7 +17,5 @@ public class fall : MonoBehaviour {
     {
         rBody.velocity = speed * rBody.velocity.normalized;
         speed += 1f;
-       
-        //print(speed);
     }
 }

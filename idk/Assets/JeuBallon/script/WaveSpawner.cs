@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Fait apparaître les ballons aléatoirement 
+
 public class WaveSpawner : MonoBehaviour {
 
     [SerializeField]
@@ -9,17 +11,14 @@ public class WaveSpawner : MonoBehaviour {
 
     [SerializeField]
     public Transform spawnPoint;
-
     private float timeBetweenWave;
-
     private float countdown;
     private int waveNumber;
     public static bool isActive;
 	
-	// Update is called once per frame
     void Start()
     {
-        timeBetweenWave = Random.Range(5f, 6f);
+        timeBetweenWave = Random.Range(5f, 6f); 
         isActive = true;
         countdown = 2f;
         waveNumber = 1;
@@ -45,7 +44,6 @@ public class WaveSpawner : MonoBehaviour {
 
     void SpwanWave()
     {
-
         SpawnSphere();
         waveNumber++;
     }

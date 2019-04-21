@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
+//Contrôle les points de vie du joueur pour le jeu ballon 
+
 public class PointDeVie : MonoBehaviour
 {
     public static int NbPv;
@@ -19,16 +21,11 @@ public class PointDeVie : MonoBehaviour
 
     void Awake()
     {
-        // Set up the reference.
-        //Score = GetComponent<Text>();
-
-        // Reset the score.
         NbPv = 3;
         PV = 3;
         finPartie = false;
     }
 
-    // Start is called before the first frame update
     private void Start()
     {
         NbPv = 3;
@@ -36,7 +33,6 @@ public class PointDeVie : MonoBehaviour
         finPartie = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         NbPv = PV - killZone.nbkill;

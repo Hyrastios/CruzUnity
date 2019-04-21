@@ -9,24 +9,19 @@ public class ScoreManager : MonoBehaviour {
     public static string inText;
 
     [SerializeField]
-    private Text Score;    // Reference to the Text component.
+    private Text Score;    
 
 
     void Start()
     {
-        // Set up the reference.
-        //Score = GetComponent<Text>();
-
-        // Reset the score.
         score = 0;
     }
 
     void Update()
     {
-        // Set the displayed text to be the word "Score" followed by the score value.
         Score.text = score.ToString();
 
-        if (PointDeVie.finPartie)
+        if (PointDeVie.finPartie) //Change le meilleur score dans ScoreBallon si le score du joueur est > au meilleur score 
         {
             Score.text = " ";
             

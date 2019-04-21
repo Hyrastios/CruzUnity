@@ -14,7 +14,6 @@ public class Menu : MonoBehaviour
         bout.SetActive(true);
     } 
 
-    // Update is called once per frame
     void Update()
     {
         isActive = menuObjet.activeInHierarchy;
